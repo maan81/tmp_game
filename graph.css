@@ -25,3 +25,18 @@
 .line3 {
     left: 468px;
 }
+.blue-above {
+    top: 3px;
+}
+.green-above {
+    top: 114px;
+}
+.green-below {
+    top: 225px;
+}
+.blue-below {
+    top: 300px;
+}
+.hide{
+	display: none;
+}
