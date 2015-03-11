@@ -101,12 +101,10 @@ function executeChange(data,col,h){
 
 		$('.line.green-below.line'+col)
 			// .eq(col)
-			// .addClass('line'+col)
 			.removeClass('hide')
 
 		$('.line.blue-below.line'+col)
 			// .eq(col)
-			// .addClass('line'+col)
 			.removeClass('hide')
 
 	}else if(top>(h*6)){
@@ -114,22 +112,18 @@ function executeChange(data,col,h){
 
 		$('.line.green-above.line'+col)
 			// .eq(col)
-			// .addClass('line'+col)
 			.removeClass('hide')
 
 		$('.line.blue-above.line'+col)
 			// .eq(col)
-			// .addClass('line'+col)
 			.removeClass('hide')
 	}else{
 		$('.line.green-above.line'+col)
 			// .eq(col)
-			// .removeClass('line'+col)
 			.addClass('hide')
 
 		$('.line.blue-above.line'+col)
 			// .eq(col)
-			// .removeClass('line'+col)
 			.addClass('hide')
 
 	}
