@@ -1,0 +1,27 @@
+.graph-wrapper{
+	width: 783px; 
+	height: 412px; 
+	position: relative; 
+	margin-left: auto; 
+	margin-right: auto;		
+}
+.img{
+	width: 783px;
+	height: 412px;
+}
+.line {
+    margin-left: 158px;
+    position: absolute;
+}
+.line0 {
+    left: 0;
+}
+.line1 {
+    left: 156px;
+}
+.line2 {
+    left: 312px;
+}
+.line3 {
+    left: 468px;
+}

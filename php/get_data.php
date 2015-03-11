@@ -6,16 +6,17 @@
 	}
 
 
-
-	// $sql = 'SELECT * from client_signal_random;';
-
 	$sql =
-		'SELECT * '.
+		'SELECT signal_value,location,`interval`,a.`random` '.
 
 		'FROM `client_signal_random`, '.
-		'	(SELECT FLOOR((RAND() * (86400-0+1))+0) as `limit`) as a '.
 
-		'WHERE location > a.`limit` '.
+			// SELECT FLOOR((RAND() * (max-min))+min)
+			// max = largest number in client_signal.location
+			// min = smallest number in client_signal.location
+		'	(SELECT FLOOR((RAND() * (86400-0.5))+0.5) as `random`) as a '.
+
+		'WHERE location > a.`random` '.
 		 
 		'ORDER BY location ASC '. 
 
@@ -27,7 +28,6 @@
 
 	mysqli_close($con);
 
-// echo '<pre>';
 	echo json_encode($data);
 
 

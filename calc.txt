@@ -1,0 +1,41 @@
+ 50 range approximately ?? times in 1 hour  ('50'),
+ 60 range approximately 12 times in 1 hour  ('60_ABOVE'), ('60_BELOW'),
+ 70 range approximately  6 times in 1 hour  ('70_ABOVE'), ('70_BELOW'),
+ 80 range approximately  4 times in 1 hour  ('80_ABOVE'), ('80_BELOW'),
+ 90 range approximately  5 times in 1 day   ('90_ABOVE'), ('90_BELOW'),
+100 range approximately  1 time  in 1 day   ('100_ABOVE'),('100_BELOW'),
+
+
+60 = 12 * 24 (ie, 12 times every hour in a day) = 288
+70 =  6 * 24 (ie,  6 times every hour in a day) = 144
+80 =  4 * 24 (ie,  4 times every hour in a day) =  96
+90 =  5      (ie,  5 times a day)               =   5 
+100=  1      (ie,  1 times a day)               =   1
+
+So, for 50 ,
+the remaning seconds every hour in a day 
+ = (total seconds in a day) - (total seconds already used of a day)
+ = (60*60*24) - (288+144+96+5+1)
+ = 86400 - 534
+ = 85866
+
+
+
+Also,
+
+  for  60_ABOVE, we have 288/2 = 144
+  for  60_BELOW, we have 288/2 = 144
+
+  for  70_ABOVE, we have 144/2 = 72
+  for  70_BELOW, we have 144/2 = 72
+
+  for  80_ABOVE, we have  96/2 = 48
+  for  80_BELOW, we have  96/2 = 48
+
+  for  90_ABOVE, we have   5/2 = 2.5
+  for  90_BELOW, we have   5/2 = 2.5
+
+  for 100_ABOVE, we have   1/2 = 0.5
+  for 100_BELOW, we have   1/2 = 0.5
+
+The used database table is based on these calculations.
